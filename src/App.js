@@ -1,4 +1,4 @@
-import Header from './Component/Header';
+
 import NotFound from './Page/NotFound';
 import './App.css';
 import { RouterProvider } from 'react-router';
