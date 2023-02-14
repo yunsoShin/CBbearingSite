@@ -5,9 +5,13 @@ import { Link } from 'react-router-dom';
 import User from './User';
 export default function Navbar() {
     const[user,setUser] = useState();
-    useEffect(()=>{
-        onUserStateChange(setUser)
-    },[]);
+    useEffect(() => {
+        onUserStateChange((user) => {
+          console.log(user);
+          setUser(user);
+        });
+      }, []);
+    
 
     return (
         <header className="flex justify-between p-2">
