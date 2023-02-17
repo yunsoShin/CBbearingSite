@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,onAuthStateChanged  } from "firebase/auth";
-import { getDatabase , get , ref} from "firebase/database";
+
 
 
 const firebaseConfig = {
@@ -15,8 +15,9 @@ const firebaseConfig = {
 const provider = new GoogleAuthProvider();
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const database = getDatabase(app);
-console.log(database);
+console.log(app);
+
+
 
 export function Outhlogin() {
   signInWithPopup(auth, provider).catch(console.error);
@@ -29,23 +30,9 @@ export function Outhlogout() {
 
 
 export function onUserStateChange(callback) {
-  onAuthStateChanged(auth, async (user) => {
-    const updatedUser = user ? await adminUser(user) : null;
-    callback(updatedUser);
-  });
+    callback();
 }
 
-async function adminUser(user) {
-  return get(ref(database, 'admins')) //
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        const admins = snapshot.val();
-        const isAdmin = admins.includes(user.uid);
-        return { ...user, isAdmin };
-      }
-      return user;
-    });
-}
 
 
 

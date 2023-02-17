@@ -6,10 +6,7 @@ import User from './User';
 export default function Navbar() {
     const[user,setUser] = useState();
     useEffect(() => {
-        onUserStateChange((user) => {
-          console.log(user);
-          setUser(user);
-        });
+        onUserStateChange(setUser);
       }, []);
     
 
