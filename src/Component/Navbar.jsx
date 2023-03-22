@@ -11,9 +11,9 @@ export default function Navbar() {
     
 
     return (
-        <header className="flex justify-between p-2">
-            <nav className='flex justify-between p-0 w-full items-center gap-3 border-b border-gray-300'>
-                <Link to='/'><img src={CompanyLogo} alt="CompanyLogo"/></Link>
+        <header className="flex justify-between p-0 w-full items-center border-b border-gray-300" >
+            <Link to='/'><img className='flex items-center scale-75'  src={CompanyLogo} alt="CompanyLogo" /></Link>
+            <nav className=''>
                 <ul className='flex items-center gap-5 font-semibold text-xl pr-5'>
                     <li>{user&&<User user={user}/>}</li>
                     <li>{!user && <button onClick={Outhlogin}>Login</button>}</li>
