@@ -11,17 +11,15 @@ export default function Navbar() {
     
 
     return (
-        <header className="flex justify-between p-0 w-full items-center border-b border-gray-300" >
-            <Link to='/'><img className='flex items-center scale-75'  src={CompanyLogo} alt="CompanyLogo" /></Link>
-            <nav className=''>
-                <ul className='flex items-center gap-5 font-semibold text-xl pr-5'>
-                    <li>{user&&<User user={user}/>}</li>
-                    <li>{!user && <button onClick={Outhlogin}>Login</button>}</li>
-                    <li>{user && <button  onClick={Outhlogout}>Logout</button>}</li>
-                    <li><Link to='/Brand'>Brand</Link></li>
-                    <li><Link to='/Contact'>Contact</Link></li>
-                    <li><Link to='/products'>product</Link></li>
-                </ul>
+        <header className='flex justify-between border-b border-gray-300 p-0'>
+            <Link to='/'><img className='flex items-center scale-75 translate-x-[-1rem]'  src={CompanyLogo} alt="CompanyLogo" /></Link>
+            <nav className='flex items-center gap-4 font-semibold text-xl '>
+                    {user&&<User user={user}/>}
+                    {!user && <button onClick={Outhlogin}>Login</button>}
+                    {user && <button  onClick={Outhlogout}>Logout</button>}
+                    <Link to='/Brand'>Brand</Link>
+                    <Link to='/Contact'>Contact</Link>
+                    <Link to='/products'>product</Link>
             </nav>
         </header>
     );
