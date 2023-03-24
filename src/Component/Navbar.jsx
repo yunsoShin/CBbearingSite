@@ -14,7 +14,7 @@ export default function Navbar() {
     return (
         <header className='flex justify-between border-b border-gray-300 w-full h-20'>
             <Link to='/'><img className='items-center  hidden sm:block h-12 scale-120 translate-x-3 translate-y-3'  src={CompanyLogo} alt="CompanyLogo" /></Link>
-            <nav className='flex items-center gap-8 font-semibold text-xl px-10'>
+            <nav className='flex items-center gap-8 font-semibold text-xl px-10'> 
                     
                     <Link to='/Brand'>Brand</Link>
                     <Link to='/Contact'>Contact</Link>
