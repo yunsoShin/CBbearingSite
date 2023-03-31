@@ -22,7 +22,7 @@ export function login(){
 export function logout(){
   signOut(auth)
   
-}
+} 
 
 export function onUserStateChange(callback){
   onAuthStateChanged(auth, async (user) => {
