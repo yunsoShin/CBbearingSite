@@ -35,7 +35,7 @@ export function onUserStateChange(callback){
 async function adminUser(user){
   return get(ref(database,'admins'))
   .then((snapshot)=>{
-    if(snapshot.exists()){
+    if(snapshot.exists()) {
       const admins=snapshot.val();
       const isAdmin = admins.includes(user.uid);
       return{...user,isAdmin};
