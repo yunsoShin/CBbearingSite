@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link to='/'><img className="items-center  hidden sm:block h-12 max-w-full w-auto scale-110 translate-x-3 translate-y-3"  src={CompanyLogo} alt="CompanyLogo" /></Link>
             <Link to='/'><img className="items-center  sm:hidden block h-12 max-w-full w-auto scale-110 translate-x-3 translate-y-3"  src={smCompanyLogo} alt="CompanyLogo" /></Link>
             <nav className='flex items-center gap-8 font-semibold text-xl px-10'>
-                    
+                     
                     <Link to='/Brand'>Brand</Link>
                     <Link to='/Contact'>Contact</Link>
                     <Link to='/products'>product</Link>
