@@ -8,6 +8,8 @@ import Products from './Page/Products';
 import Root from './Page/Root';
 import Contact from './Page/Contact';
 import Brand from './Page/Brand';
+import { AuthContextProvider } from './Component/context/AuthContext';
+import NewProduct from './Page/NewProduct';
 
 const router=createBrowserRouter([
   {
@@ -18,7 +20,8 @@ const router=createBrowserRouter([
       {index:true,element:<Home></Home>},
       {path:'/products',element:<Products/>},
       {path:'/Contact',element:<Contact/>},
-      {path:'/Brand',element:<Brand/>}
+      {path:'/Brand',element:<Brand/>},
+      {path:'/NewProduct',element:<NewProduct/>}
 
 
     ]
@@ -29,7 +32,9 @@ const router=createBrowserRouter([
 
 function App() {
   return (
+    <AuthContextProvider>
     <RouterProvider router={router}></RouterProvider>
+    </AuthContextProvider>
   );
 }
 
