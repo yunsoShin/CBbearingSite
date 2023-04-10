@@ -3,7 +3,7 @@ import { login,logout, onUserStateChange } from '../Api/firebase';
 import CompanyLogo from '../img/CompanyNavLogo.png'
 import smCompanyLogo from '../img/smCompanyNavLogo.png'
 import { Link } from 'react-router-dom';
-import User from './User';
+import User from './User'; 
 import Button from './Button';
 import { useAuthContext } from './context/AuthContext';
 
