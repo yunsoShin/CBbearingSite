@@ -33,7 +33,7 @@ const router=createBrowserRouter([
 function App() {
   return (
     <AuthContextProvider>
-    <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </AuthContextProvider>
   );
 }
