@@ -21,7 +21,7 @@ const router=createBrowserRouter([
       {path:'/products',element:<Products/>},
       {path:'/Contact',element:<Contact/>},
       {path:'/Brand',element:<Brand/>},
-      {path:'/NewProduct',element:<NewProduct/>}
+      {path:'/Product/new',element:<NewProduct/>}
 
 
     ]

@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { login,logout, onUserStateChange } from '../Api/firebase';
 import CompanyLogo from '../img/CompanyNavLogo.png'
 import smCompanyLogo from '../img/smCompanyNavLogo.png'
 import { Link } from 'react-router-dom';
@@ -19,6 +17,7 @@ export default function Navbar() {
                     
                     <Link to='/Brand'>Brand</Link>
                     <Link to='/Contact'>Contact</Link>
+                    {user && user.isAdmin&& (<Link to='/Product/new'>add</Link>)}
                     <Link to='/products'>product</Link>
                     {user && <User user={user}></User>}
                     {!user && <Button text={'Login'} onClick={login} />}
