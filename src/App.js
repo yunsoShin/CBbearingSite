@@ -10,7 +10,7 @@ import Contact from './Page/Contact';
 import Brand from './Page/Brand';
 import { AuthContextProvider } from './Component/context/AuthContext';
 import NewProduct from './Page/NewProduct';
-
+import ProtectedRoute from './Page/ProtectedRoute';
 const router=createBrowserRouter([
   {
     path: '/',
@@ -21,7 +21,11 @@ const router=createBrowserRouter([
       {path:'/products',element:<Products/>},
       {path:'/Contact',element:<Contact/>},
       {path:'/Brand',element:<Brand/>},
-      {path:'/Product/new',element:<NewProduct/>}
+      {path:'/Product/new',
+      element:
+        <ProtectedRoute>
+          <NewProduct/>
+        </ProtectedRoute>}
 
 
     ]
