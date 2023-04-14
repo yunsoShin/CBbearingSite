@@ -18,7 +18,7 @@ export default function Navbar() {
                     <Link to='/Brand'>Brand</Link>
                     <Link to='/Contact'>Contact</Link>
                     {user && user.isAdmin&& (<Link to='/Product/new'>add</Link>)}
-                    <Link to='/products'>product</Link>
+                    <Link to='/Products'>Product</Link>
                     {user && <User user={user}></User>}
                     {!user && <Button text={'Login'} onClick={login} />}
                     {user && <Button  text={'logout'} onClick={logout} />}

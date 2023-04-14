@@ -26,8 +26,6 @@ const router=createBrowserRouter([
         <ProtectedRoute>
           <NewProduct/>
         </ProtectedRoute>}
-
-
     ]
   }, 
 
