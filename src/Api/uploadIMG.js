@@ -1,1 +1,1 @@
-export async function uploadImage(file)
+export async function uploadImage(file) 
