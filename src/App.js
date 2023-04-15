@@ -12,7 +12,7 @@ import { AuthContextProvider } from './Component/context/AuthContext';
 import NewProduct from './Page/NewProduct';
 import ProtectedRoute from './Page/ProtectedRoute';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { query } from '@firebase/database';
+import QnA from './Page/QnA';
 const router=createBrowserRouter([
   {
     path: '/',
@@ -23,11 +23,13 @@ const router=createBrowserRouter([
       {path:'/products',element:<AllProducts/>},
       {path:'/Contact',element:<Contact/>},
       {path:'/Brand',element:<Brand/>},
+      {path:'/QnA',element:<QnA/>},
       {path:'/Product/new',
       element:
         <ProtectedRoute>
           <NewProduct/>
         </ProtectedRoute>}
+      
 
 
     ]

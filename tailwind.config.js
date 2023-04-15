@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        banner: `url('/Users/sin-yunsu/react-shop/public/images/banner.png')`,
+      },
+
+    },
   },
   plugins: [],
 }
