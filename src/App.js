@@ -4,13 +4,15 @@ import './App.css';
 import { RouterProvider } from 'react-router';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from './Page/Home';
-import Products from './Page/Products';
+import AllProducts from './Page/AllProducts';
 import Root from './Page/Root';
 import Contact from './Page/Contact';
 import Brand from './Page/Brand';
 import { AuthContextProvider } from './Component/context/AuthContext';
 import NewProduct from './Page/NewProduct';
 import ProtectedRoute from './Page/ProtectedRoute';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { query } from '@firebase/database';
 const router=createBrowserRouter([
   {
     path: '/',
@@ -18,7 +20,7 @@ const router=createBrowserRouter([
     errorElement: <NotFound></NotFound>,
     children:[
       {index:true,element:<Home></Home>},
-      {path:'/products',element:<Products/>},
+      {path:'/products',element:<AllProducts/>},
       {path:'/Contact',element:<Contact/>},
       {path:'/Brand',element:<Brand/>},
       {path:'/Product/new',
@@ -33,12 +35,14 @@ const router=createBrowserRouter([
 
 
 ])
-
+const queryClient=new QueryClient();
 function App() {
   return (
-    <AuthContextProvider>
-      <RouterProvider router={router}></RouterProvider>
-    </AuthContextProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthContextProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </AuthContextProvider>
+    </QueryClientProvider>
   );
 }
 
