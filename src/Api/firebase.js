@@ -21,7 +21,7 @@ const database = getDatabase(app);
 
 export function login(){
   signInWithPopup(auth, provider).catch(console.error);
-} 
+}  
 
 
 export function logout(){
