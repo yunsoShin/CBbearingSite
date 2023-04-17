@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider , signOut , onAuthStateChanged} from "firebase/auth";
-import { getDatabase, ref, set, get} from "firebase/database";
+import { getDatabase, ref, set, get ,serverTimestamp} from "firebase/database";
 import {v4 as uuid} from "uuid";
 
 const firebaseConfig = {
@@ -38,7 +38,7 @@ export function onUserStateChange(callback){
   });
 }
 
-async function adminUser(user){
+function adminUser(user){
   return get(ref(database,'admins'))
   .then((snapshot)=>{
     if(snapshot.exists()) {
@@ -81,19 +81,19 @@ export async function handleDelete(id) {
 
 
 
-/*export function Outhlogin() {
-  signInWithPopup(auth, provider).catch(console.error);
+export async function addNewQuestion(question){
+  const id=uuid();
+  return set(ref(database,`question/${id}`),{
+    ...question,
+    id,
+  });
 }
 
-
-export function Outhlogout() {
-  signOut(auth).catch(console.error);
+export async function getQuestion(){
+  return get(ref(database,'question')).then((snapshot)=>{
+        if(snapshot.exists()) {
+          return Object.values(snapshot.val());
+        }
+        return [];
+      })
 }
-
-
-export function onUserStateChange(callback) {
-    callback();
-}
-
-*/
-

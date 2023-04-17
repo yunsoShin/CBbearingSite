@@ -24,7 +24,7 @@ function LogoSlider(props) {
       autoplay={{ delay: 1500 }}
       loop
       spaceBetween={0}
-      slidesPerView={8} // Add this line to show 8 slides at a time
+      slidesPerView={10} // Add this line to show 8 slides at a time
         onSlideChange={(swiper) => {}}
       
     >
@@ -87,19 +87,19 @@ function LogoSlider(props) {
         
       
       <SwiperSlide>
-        <img src={ft_rolling_logo10} alt="Logo 8" className="flex scale-50 -translate-y-6" />
+        <img src={ft_rolling_logo10} alt="Logo 8" className="flex scale-50 -translate-y-2" />
       </SwiperSlide>
       <SwiperSlide> 
-        <img src={ft_rolling_logo11} alt="Logo 8" className="flex  scale-50 translate-y-4" />
+        <img src={ft_rolling_logo11} alt="Logo 8" className="flex  scale-50 translate-y-8" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={ft_rolling_logo12} alt="Logo 8" className="flex scale-50 translate-y-5" />
+        <img src={ft_rolling_logo12} alt="Logo 8" className="flex scale-50 translate-y-9" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={ft_rolling_logo13} alt="Logo 8" className="flex scale-50 translate-y-7" />
+        <img src={ft_rolling_logo13} alt="Logo 8" className="flex scale-50 translate-y-10" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={ft_rolling_logo14} alt="Logo 8" className="flex scale-50 translate-y-7" />
+        <img src={ft_rolling_logo14} alt="Logo 8" className="flex scale-50 translate-y-8" />
       </SwiperSlide>
 
 
