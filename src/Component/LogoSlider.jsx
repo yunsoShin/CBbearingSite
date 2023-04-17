@@ -19,7 +19,7 @@ import 'swiper/css';
 SwiperCore.use([Autoplay]);
 function LogoSlider(props) {
   return (
-    <div className="flex items-center display: -webkit-inline-box ">
+    <div className=" hidden md:block inline-block-center">
   <Swiper
       autoplay={{ delay: 1500 }}
       loop
@@ -87,10 +87,10 @@ function LogoSlider(props) {
         
       
       <SwiperSlide>
-        <img src={ft_rolling_logo10} alt="Logo 8" className="flex scale-50 -translate-y-8" />
+        <img src={ft_rolling_logo10} alt="Logo 8" className="flex scale-50 -translate-y-6" />
       </SwiperSlide>
       <SwiperSlide> 
-        <img src={ft_rolling_logo11} alt="Logo 8" className="flex scale-50 translate-y-4" />
+        <img src={ft_rolling_logo11} alt="Logo 8" className="flex  scale-50 translate-y-4" />
       </SwiperSlide>
       <SwiperSlide>
         <img src={ft_rolling_logo12} alt="Logo 8" className="flex scale-50 translate-y-5" />

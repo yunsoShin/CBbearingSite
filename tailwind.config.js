@@ -6,8 +6,11 @@ module.exports = {
       backgroundImage:{
         banner: `url('/Users/sin-yunsu/react-shop/public/images/banner.png')`,
       },
-
+      
     },
+    
   },
+  
   plugins: [],
+  
 }
