@@ -19,6 +19,7 @@ const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
 
 
+
 export function login(){
   signInWithPopup(auth, provider).catch(console.error);
 }  
@@ -66,6 +67,16 @@ export async function getProducts(){
         }
         return [];
       })
+}
+export async function handleDelete(id) {
+  const itemRef = ref(database, `products/${id}`);
+  return set(itemRef, null)
+    .then(() => {
+      console.log('Data deleted successfully');
+    })
+    .catch((error) => {
+      console.error('Data deletion failed:', error);
+    });
 }
 
 
