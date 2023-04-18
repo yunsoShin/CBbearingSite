@@ -14,7 +14,7 @@ import ProtectedRoute from './Page/ProtectedRoute';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import QnA from './Page/QnA';
 const router=createBrowserRouter([
-  {
+  { 
     path: '/',
     element: <Root></Root>,
     errorElement: <NotFound></NotFound>,
