@@ -13,6 +13,7 @@ import NewProduct from './Page/NewProduct';
 import ProtectedRoute from './Page/ProtectedRoute';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import QnA from './Page/QnA';
+import LoginPage from './Page/LoginPage';
 const router=createBrowserRouter([
   { 
     path: '/',
@@ -24,6 +25,7 @@ const router=createBrowserRouter([
       {path:'/Contact',element:<Contact/>},
       {path:'/Brand',element:<Brand/>},
       {path:'/QnA',element:<QnA/>},
+      {path:'/Loginpage',element:<LoginPage/>},
       {path:'/Product/new',
       element:
         <ProtectedRoute>

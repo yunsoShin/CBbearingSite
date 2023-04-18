@@ -20,12 +20,12 @@ const database = getDatabase(app);
 
 
 
-export function login(){
+export function loginGoogle(){
   signInWithPopup(auth, provider).catch(console.error);
 }  
 
 
-export function logout(){
+export function logoutGoogle(){
   signOut(auth)
   
 } 

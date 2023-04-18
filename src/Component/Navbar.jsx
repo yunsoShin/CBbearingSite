@@ -7,8 +7,9 @@ import { useAuthContext } from './context/AuthContext';
 
 
 
+
 export default function Navbar() {
-    const {user,login,logout} = useAuthContext(); 
+    const {user,loginGoogle,logoutGoogle} = useAuthContext(); 
     return (
         <header className='flex justify-between border-b border-gray-300 w-full h-20'>
             <Link to='/'><img className="items-center  hidden md:block h-12  scale-110 translate-x-3 translate-y-3"  src={CompanyLogo} alt="CompanyLogo" /></Link>
@@ -20,8 +21,8 @@ export default function Navbar() {
                     <Link to='/Products'>Product</Link>
                     <Link to='/QnA'>QnA</Link>
                     {user && <User user={user}></User>}
-                    {!user && <Button text={'Login'} onClick={login} />}
-                    {user && <Button  text={'logout'} onClick={logout} />}
+                    {!user && (<Link className='border border-black w-1/2 hover:bg-neutral-800 rounded-md hover:text-white p-1 transition-all duration-600 ease-in-out' to='/LoginPage'>Login</Link>)}
+                    {user && <Button  text={'logout'} onClick={logoutGoogle} />}
                     
             </nav>
         </header>

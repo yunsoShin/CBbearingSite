@@ -3,7 +3,7 @@ export async function uploadImage(file){
   const cloudName = process.env.REACT_APP_CLOUD_NAME;
   const uploadPreset = process.env.REACT_APP_UPLOAD_PRESET;
   const url = `https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`;
-  if(file!=''){
+  if(file!==''){
     
   }
   formData.append('file', file);  
