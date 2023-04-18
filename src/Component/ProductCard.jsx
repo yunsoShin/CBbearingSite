@@ -8,11 +8,11 @@ function ProductCard({
   const {user} = useAuthContext();
   return (
     <li className='rounded-lg shadow-md overflow-hidden cursor-pointer'>
-      {image && < img className='w-full' src={image} alt={title} />}
-      <div className='mt-2 px-2 text-lg flex justify-between items-center'>
-        <h3 className='truncate'>{title}</h3>
+      {image && < img className='w-42 h-48' src={image} alt={title} />}
+      <div className='px-2 text-lg flex  justify-between items-center flow-grow'>
+        <h3 className='truncate mt-2'>{title}</h3>
         <p className='mt-2 px-2'>{brand}</p>
-        <p>{country}</p>
+        <p className='mt-2'>{country}</p>
         {user && user.isAdmin && <button onClick={()=> 
           window.confirm("삭제하시겠습니까?") ? handleDelete(product.id)
           .then(window.alert("삭제완료하였습니다"))

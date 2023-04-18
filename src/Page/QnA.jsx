@@ -27,9 +27,9 @@ const handlePasswordChange = (e) => {
     addNewQuestion(question).then(()=>{
       setSucess('성공적으로 등록되었습니다');
       setTimeout(()=>{
-        setSucess('');
+        setSucess(null);
       }, 3000);
-    })
+    }).then(setIsUploading(false))
   }
   return (
       <section className='w-full text-center'>
