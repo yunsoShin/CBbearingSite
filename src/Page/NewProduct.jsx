@@ -17,8 +17,21 @@ export default function NewProduct() {
   };
   const handleSubmit=(e)=>{
     e.preventDefault();
+    
     setIsUploading(true);
-    uploadImage(file)
+    if(!file){
+      addNewProduct(product)
+      .then(()=>{
+        setSucess('성공적으로 등록되었습니다');
+        setTimeout(()=>{
+          setSucess(null);
+        },3000)
+        setIsUploading(false);  
+      })
+    }
+
+    if(file){
+      uploadImage(file)
       .then(url=>{
         addNewProduct(product,url)
           .then(()=>{
@@ -29,6 +42,7 @@ export default function NewProduct() {
           })
       })
       .finally(()=>setIsUploading(false));
+    }
 
     //사진업로드 후 URL흭득
     //firebase에 제품 추가
@@ -43,7 +57,6 @@ export default function NewProduct() {
         type='file'
         accept='image/*'
         name='file'
-        required
         onChange={handleChange}
         />
       <input 

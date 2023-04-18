@@ -50,7 +50,7 @@ function adminUser(user){
   })
 }
 
-export async function addNewProduct(product,image){
+export async function addNewProduct(product,image=''){
   const id=uuid();
   return set(ref(database,`products/${id}`),{
     ...product,
