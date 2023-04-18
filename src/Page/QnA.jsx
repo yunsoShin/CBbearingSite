@@ -6,10 +6,21 @@ function QnA(props) {
   const [question,setQuestion]=useState({});
   const [isUploading,setIsUploading]=useState(false);
   const [sucess,setSucess]=useState();
+  const [hiddenPassword, setHiddenPassword] = useState('');
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
     setQuestion((currentQuestion) => ({ ...currentQuestion, [name]: value }));
   };
+const handlePasswordChange = (e) => {
+  const { value } = e.target;
+  setHiddenPassword('*'.repeat(value.length));
+  setQuestion((currentQuestion) => ({...currentQuestion, password: value }));
+
+};
+
   const handleSubmit=(e)=>{
     e.preventDefault();
     setIsUploading(true);
@@ -22,7 +33,7 @@ function QnA(props) {
   }
   return (
       <section className='w-full text-center'>
-          <h2 className='text-2xl font-bold my-4'>문의하기</h2>
+          <h className='text-2xl font-bold my-4'>문의하기</h>
           {sucess&&<p className='my-2'>{sucess}</p>}
           <form className='flex flex-col px-12' onSubmit={handleSubmit}>
           <input 
@@ -46,7 +57,14 @@ function QnA(props) {
               placeholder='품번'
               required 
               onChange={handleChange}/>
-              <Button text={isUploading ? '업로드중...':'제품등록하기'}
+            <input 
+              type="password" 
+              name='password' 
+              value={question.password ?? ''} 
+              placeholder='비밀번호'
+              required 
+              onChange={handlePasswordChange}/>
+              <Button text={isUploading ? '로딩중...':'문의하기'}
               disabled={isUploading}></Button>
           </form>
       </section>

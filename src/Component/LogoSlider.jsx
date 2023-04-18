@@ -83,12 +83,6 @@ function LogoSlider(props) {
       <SwiperSlide>
         <img src={ft_rolling_logo8} alt="Logo 8" className="flex" />
       </SwiperSlide>
-      
-        
-      
-      <SwiperSlide>
-        <img src={ft_rolling_logo10} alt="Logo 8" className="flex scale-50 -translate-y-2" />
-      </SwiperSlide>
       <SwiperSlide> 
         <img src={ft_rolling_logo11} alt="Logo 8" className="flex  scale-50 translate-y-8" />
       </SwiperSlide>
