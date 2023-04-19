@@ -5,7 +5,7 @@ import User from './User';
 import Button from './Button';
 import { useAuthContext } from './context/AuthContext';
 
-
+import NaverLoginApi from '../Api/NaverLoginApi';
 
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
                     {user && <User user={user}></User>}
                     {!user && (<Link className='border border-black w-1/2 hover:bg-neutral-800 rounded-md hover:text-white p-1 transition-all duration-600 ease-in-out' to='/LoginPage'>Login</Link>)}
                     {user && <Button  text={'logout'} onClick={logoutGoogle} />}
-                    
+                    <NaverLoginApi></NaverLoginApi>
             </nav>
         </header>
     );
