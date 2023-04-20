@@ -83,14 +83,14 @@ export async function handleDelete(id) {
 
 export async function addNewQuestion(question){
   const id=uuid();
-  return set(ref(database,`question/${id}`),{
+  return set(ref(database,`questions/${id}`),{
     ...question,
     id,
   });
 }
 
 export async function getQuestion(){
-  return get(ref(database,'question')).then((snapshot)=>{
+  return get(ref(database,'questions')).then((snapshot)=>{
         if(snapshot.exists()) {
           return Object.values(snapshot.val());
         }

@@ -8,7 +8,7 @@ function ProductCard({
   const {user} = useAuthContext();
   return (
     <li className='rounded-lg shadow-md overflow-hidden cursor-pointer'>
-      {image && < img className='w-42 h-48' src={image} alt={title} />}
+      {image && < img className='w-full h-48' src={image} alt={title} />}
       <div className='px-2 text-lg flex  justify-between items-center flow-grow'>
         <h3 className='truncate mt-2'>{title}</h3>
         <p className='mt-2 px-2'>{brand}</p>
