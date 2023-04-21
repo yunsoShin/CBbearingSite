@@ -14,7 +14,7 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
 
@@ -83,17 +83,19 @@ export async function handleDelete(id) {
 
 export async function addNewQuestion(question){
   const id=uuid();
-  return set(ref(database,`questions/${id}`),{
+  /*return set(ref(database,`questions/${id}`),{
     ...question,
     id,
-  });
+  });*/
 }
 
+
 export async function getQuestion(){
-  return get(ref(database,'questions')).then((snapshot)=>{
+  return null; /*get(ref(database,'questions')).then((snapshot)=>{
         if(snapshot.exists()) {
           return Object.values(snapshot.val());
         }
         return [];
       })
+}*/
 }
