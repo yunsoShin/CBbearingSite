@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Component/Button';
 import { useState } from 'react';
 import { addNewQuestion } from '../Api/firebase';
+import QnAlist from '../Component/Questions';
 function QnA(props) {
   const [question,setQuestion]=useState({});
   const [isUploading,setIsUploading]=useState(false);
@@ -33,7 +34,7 @@ const handlePasswordChange = (e) => {
   }
   return (
       <section className='w-full text-center'>
-          <h className='text-2xl font-bold my-4'>문의하기</h>
+          <h1 className='text-2xl font-bold my-4'>문의하기</h1>
           {sucess&&<p className='my-2'>{sucess}</p>}
           <form className='flex flex-col px-12' onSubmit={handleSubmit}>
           <input 
