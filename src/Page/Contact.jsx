@@ -7,6 +7,7 @@ export default function Contact() {
     return (
         <div>
             
+            <Questions></Questions>
             <li>리스트</li>
         </div>
     )
