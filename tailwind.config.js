@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        banner: `url('/Users/sin-yunsu/react-shop/public/images/banner.png')`,
+        banner: `url('C:\Users\win98\Desktop\자스공부\react-shop\public\images\banner.png')`,
       },
       
     },
