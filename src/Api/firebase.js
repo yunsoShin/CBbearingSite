@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider , signOut , onAuthStateChanged} from "firebase/auth";
-import { getDatabase, ref, set, get } from "firebase/database";
+import { getDatabase, ref, set, get ,serverTimestamp} from "firebase/database";
 import {v4 as uuid} from "uuid";
 
 const firebaseConfig = {
@@ -14,7 +14,7 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const auth = getAuth();
 const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
 
@@ -89,11 +89,11 @@ export async function addNewQuestion(question){
   });
 }
 
-export function getQuestion(){
+export async function getQuestion(){
   return get(ref(database,'questions')).then((snapshot)=>{
         if(snapshot.exists()) {
           return Object.values(snapshot.val());
         }
         return [];
       })
-    }
+}

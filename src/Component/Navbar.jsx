@@ -5,7 +5,7 @@ import User from './User';
 import Button from './Button';
 import { useAuthContext } from './context/AuthContext';
 
-
+import NaverLoginApi from '../Api/NaverLoginApi';
 
 
 export default function Navbar() {
