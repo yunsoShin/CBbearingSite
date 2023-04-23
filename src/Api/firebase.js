@@ -13,19 +13,18 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 const database = getDatabase(app);
 
-
-
-export function loginGoogle(){
+export function login(){
   signInWithPopup(auth, provider).catch(console.error);
-}  
+} 
 
 
-export function logoutGoogle(){
+export function logout(){
   signOut(auth)
   
 } 
@@ -38,7 +37,7 @@ export function onUserStateChange(callback){
   });
 }
 
-function adminUser(user){
+async function adminUser(user){
   return get(ref(database,'admins'))
   .then((snapshot)=>{
     if(snapshot.exists()) {
@@ -47,46 +46,28 @@ function adminUser(user){
       return{...user,isAdmin};
     }
     return user;
-  })
-}
-
-export async function addNewProduct(product,image=''){
-  const id=uuid();
-  return set(ref(database,`products/${id}`),{
-    ...product,
-    id,
-    image,
-    option: product.options ? product.options.split(',') : [],
-  });
-}
-
-export async function getProducts(){
-  return get(ref(database,'products')).then((snapshot)=>{
-        if(snapshot.exists()) {
-          return Object.values(snapshot.val());
-        }
-        return [];
-      })
-}
-export async function handleDelete(id) {
-  const itemRef = ref(database, `products/${id}`);
-  return set(itemRef, null)
-    .then(() => {
-      console.log('Data deleted successfully');
-    })
-    .catch((error) => {
-      console.error('Data deletion failed:', error);
-    });
+    //dsdsd
+  })  
 }
 
 
 
-export async function addNewQuestion(question){
-  const id=uuid();
-  return set(ref(database,`questions/${id}`),{
-    ...question,
-    id,
-  });
+
+
+
+
+/*export function Outhlogin() {
+  signInWithPopup(auth, provider).catch(console.error);
+}
+
+
+export function Outhlogout() {
+  signOut(auth).catch(console.error);
+}
+
+
+export function onUserStateChange(callback) {
+    callback();
 }
 
 export async function getQuestion(){
@@ -97,3 +78,4 @@ export async function getQuestion(){
         return [];
       })
 }
+*/
