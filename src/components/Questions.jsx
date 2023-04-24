@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { getQuestion } from '../Api/firebase';
+import { getQuestion } from '../api/firebase';
 import QuestionList from './QuestionList';
 
 
