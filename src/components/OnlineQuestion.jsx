@@ -2,7 +2,6 @@ import React from "react";
 import Button from './ui/Button';
 import { Link } from "react-router-dom";
 import {BiTimeFive} from "react-icons/bi";
-import { icons } from "react-icons/lib";
 function OnlineQuestion() {
   return (
     <div className="w-full m-auto relative" id="online_question">

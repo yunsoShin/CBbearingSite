@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
-import { handleDelete } from '../api/firebase';
+import { handleDelete } from '../Api/firebase';
 
 
 export default function ProductCard({
