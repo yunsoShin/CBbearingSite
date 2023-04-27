@@ -12,7 +12,7 @@ export default function Products() {
       {error && <p>{error}</p>}
       <ul className='grid grid-cols-1 md:grid-cols-3 lg-grid-cols-4 gap-4 p-4'>
         {products &&
-    products.slice(0, 10).map((product) => (
+     products.slice(products.length - 10, products.length).map((product) => (
       <ProductCard key={product.id} product={product} />
     ))}
       </ul>

@@ -56,7 +56,6 @@ export async function addNewProduct(product,image=''){
     ...product,
     id,
     image,
-    option: product.options ? product.options.split(',') : [],
   });
 }
 

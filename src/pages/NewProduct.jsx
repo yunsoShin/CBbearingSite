@@ -74,7 +74,7 @@ export default function NewProduct() {
         onChange={handleChange}/>
       <input 
         type="text" 
-        name='country' 
+        name='partNumber' 
         value={product.partNumber ?? ''} 
         placeholder='품번'
         required 
