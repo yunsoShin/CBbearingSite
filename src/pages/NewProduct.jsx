@@ -75,8 +75,8 @@ export default function NewProduct() {
       <input 
         type="text" 
         name='country' 
-        value={product.country ?? ''} 
-        placeholder='국가'
+        value={product.partNumber ?? ''} 
+        placeholder='품번'
         required 
         onChange={handleChange}/>
         <Button text={isUploading ? '업로드중...':'제품등록하기'}
