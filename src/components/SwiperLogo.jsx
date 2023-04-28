@@ -9,11 +9,7 @@ import ft_rolling_logo5 from "../img/ft_rolling_logo5.png";
 import ft_rolling_logo6 from "../img/ft_rolling_logo6.png";
 import ft_rolling_logo7 from "../img/ft_rolling_logo7.png";
 import ft_rolling_logo8 from "../img/ft_rolling_logo8.png";
-import ft_rolling_logo10 from "../img/ft_rolling_logo10.png";
-import ft_rolling_logo11 from "../img/ft_rolling_logo11.png";
-import ft_rolling_logo12 from "../img/ft_rolling_logo12.jpeg";
-import ft_rolling_logo13 from "../img/ft_rolling_logo113.png";
-import ft_rolling_logo14 from "../img/ft_rolling_logo14.jpeg";
+
 
 import 'swiper/css';
 SwiperCore.use([Autoplay]);

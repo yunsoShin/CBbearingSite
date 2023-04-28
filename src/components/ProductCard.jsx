@@ -12,9 +12,9 @@ export default function ProductCard({
   const {user} = useAuthContext();
   return (
     <li
-      onClick={() => {
+      /*onClick={() => {
         navigate(`/products/${id}`, { state: { product } });
-      }}
+      }}*/
       className='rounded-lg shadow-md overflow-hidden cursor-pointer transition-all hover:scale-105'
     >
       {image&&<img className='w-full' src={image} alt={title} />}
