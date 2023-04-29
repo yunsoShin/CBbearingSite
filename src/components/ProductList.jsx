@@ -16,7 +16,7 @@ export default function ProductList() {
 
   const goToPreviousPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
-  };
+  }; //테스트
   return (
     <>
       {isLoading && <p>Loading...</p>}
