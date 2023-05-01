@@ -33,7 +33,7 @@ const handlePasswordChange = (e) => {
   }
   return (
       <section className='w-full text-center mt-5'>
-          <h className='text-2xl font-bold'>Q&A</h>
+          <h1 className='text-2xl font-bold'>Q&A</h1>
           {sucess&&<p className='my-2'>{sucess}</p>}
           <form className='flex flex-col px-12 m-5' onSubmit={handleSubmit}>
           <input 
@@ -41,7 +41,7 @@ const handlePasswordChange = (e) => {
               name='title' 
               value={question.title ?? ''} 
               placeholder='제목'
-              maxlength='20'
+              maxLength='20'
               required 
               onChange={handleChange}/>
           <textarea

@@ -17,6 +17,7 @@ export default function ProductList() {
   const goToPreviousPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   }; //테스트1
+  
   return (
     <>
       {isLoading && <p>Loading...</p>}
@@ -32,7 +33,6 @@ export default function ProductList() {
       </button>
       <button
         onClick={goToNextPage}
-        disabled={currentPage === Math.ceil(products.length / ITEMS_PER_PAGE)}
       >
         다음 페이지
       </button>
