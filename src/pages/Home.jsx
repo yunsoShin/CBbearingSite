@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <Products />
       <OnlineQuestion></OnlineQuestion>
       <SwiperLogo></SwiperLogo>
     </>
