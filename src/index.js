@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound';
 import ProtectedRoute from './pages/ProtectedRoute';
 import AllQuestions from './pages/AllQuestions';
 import NewQuestion from './pages/NewQuestion';
-import 'antd/dist/antd.css';
+import 'antd/dist/reset.css';
 
 const router = createBrowserRouter([
   {
