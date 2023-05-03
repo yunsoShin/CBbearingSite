@@ -3,40 +3,19 @@ import '../index.css';
 import { SearchOutlined } from '@ant-design/icons';
 import { Button, Input, Space, Table } from 'antd';
 import Highlighter from 'react-highlight-words';
+import useProducts from '../hooks/useProducts';
 
 
-const data = [
-  {
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-  },
-  {
-    key: '2',
-    name: 'Joe Black',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-  },
-  {
-    key: '3',
-    name: 'Jim Green',
-    age: 32,
-    address: 'Sydney No. 1 Lake Park',
-  },
-  {
-    key: '4',
-    name: 'Jim Red',
-    age: 32,
-    address: 'London No. 2 Lake Park',
-  },
-];
 
 export default function AntDesign(){
   const [searchText, setSearchText] = useState('');
   const [searchedColumn, setSearchedColumn] = useState('');
   const searchInput = useRef(null);
-
+  const {
+    productsQuery: { isLoading, error, data: products },
+  } = useProducts();
+  const data = products
+  console.log(data)
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();
     setSearchText(selectedKeys[0]);
@@ -103,6 +82,7 @@ export default function AntDesign(){
       <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />
     ),
     onFilter: (value, record) =>
+      record[dataIndex] &&
       record[dataIndex]
         .toString()
         .toLowerCase()
@@ -115,7 +95,7 @@ export default function AntDesign(){
     render: (text) =>
       searchedColumn === dataIndex ? (
         <Highlighter
-          highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
+          highlightStyle={{ backgroundColor: '#ffc069', padding: 10 }}
           searchWords={[searchText]}
           autoEscape
           textToHighlight={text ? text.toString() : ''}
@@ -126,29 +106,29 @@ export default function AntDesign(){
     });
     const columns = [
       {
-        title: 'Name',
-        dataIndex: 'name',
-        key: 'name',
+        title: 'Title',
+        dataIndex: 'title',
+        key: 'title',
         width: '30%',
-        ...getColumnSearchProps('name'),
+        ...getColumnSearchProps('title'),
       },
       {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'age',
+        title: 'Brand',
+        dataIndex: 'brand',
+        key: 'brand',
         width: '20%',
-        ...getColumnSearchProps('age'),
+        ...getColumnSearchProps('brand'),
       },
       {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'address',
-        ...getColumnSearchProps('address'),
-        sorter: (a, b) => a.address.length - b.address.length,
-        sortDirections: ['descend', 'ascend'],
+        title: 'partNumber',
+        dataIndex: 'partNumber',
+        key: 'partNumber',
+        ...getColumnSearchProps('partNumber'),
+        
+        
       },
     ];
   
-    return <Table columns={columns} dataSource={data} />;
+    return <Table  className='' columns={columns} dataSource={data}  />;
   };
   
