@@ -39,8 +39,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
+  "homepage": "https://cbbearing.co.kr/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -62,4 +65,5 @@
   "devDependencies": {
     "tailwindcss": "^3.2.6"
   }
+  
 }
