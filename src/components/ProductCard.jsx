@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
 import { handleDelete } from '../Api/firebase';
 import Button from './ui/Button';
@@ -8,7 +7,7 @@ export default function ProductCard({
   product,
   product: { id, image, title, brand, partNumber},
 }) {
-  const navigate = useNavigate();
+  
   const {user} = useAuthContext();
   return (
     <li

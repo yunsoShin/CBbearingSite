@@ -18,7 +18,7 @@ const handlePasswordChange = (e) => {
   const { value } = e.target;
   setHiddenPassword('*'.repeat(value.length));
   setQuestion((currentQuestion) => ({...currentQuestion, password: value }));
-
+  
 };
 
   const handleSubmit=(e)=>{

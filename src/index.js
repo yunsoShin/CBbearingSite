@@ -5,11 +5,9 @@ import './index.css';
 import App from './App';
 import Home from './pages/Home';
 import AllProducts from './pages/AllProducts';
-import ProductDetail from './pages/ProductDetail';
 import NewProduct from './pages/NewProduct';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './pages/ProtectedRoute';
-import AllQuestions from './pages/AllQuestions';
 import NewQuestion from './pages/NewQuestion';
 import 'antd/dist/reset.css';
 
@@ -30,10 +28,6 @@ const router = createBrowserRouter([
             <NewProduct />
           </ProtectedRoute>
         ),
-      },
-      {
-        path: '/products/:id',
-        element: <ProductDetail />,
       },
     ],
   },

@@ -12,7 +12,7 @@ export default function ProductList(){
   const [searchedColumn, setSearchedColumn] = useState('');
   const searchInput = useRef(null);
   const {
-    productsQuery: { isLoading, error, data: products },
+    productsQuery: {  data: products },
   } = useProducts();
   const data = products
   console.log(data)
