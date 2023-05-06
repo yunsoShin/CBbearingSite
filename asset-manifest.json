@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-shop/static/css/main.3d5395bf.css",
-    "main.js": "/react-shop/static/js/main.59e9c002.js",
-    "static/media/banner.png": "/react-shop/static/media/banner.e7bd7476edd6b46bbcdb.png",
-    "static/media/CompanyNavLogo.png": "/react-shop/static/media/CompanyNavLogo.60a699702ba48e699c39.png",
-    "static/media/smCompanyNavLogo.png": "/react-shop/static/media/smCompanyNavLogo.9423d75f9432541c5338.png",
-    "index.html": "/react-shop/index.html",
-    "main.3d5395bf.css.map": "/react-shop/static/css/main.3d5395bf.css.map",
-    "main.59e9c002.js.map": "/react-shop/static/js/main.59e9c002.js.map"
+    "main.css": "/react-shop/build/static/css/main.9138c4aa.css",
+    "main.js": "/react-shop/build/static/js/main.4138daad.js",
+    "static/media/banner.png": "/react-shop/build/static/media/banner.e7bd7476edd6b46bbcdb.png",
+    "static/media/CompanyNavLogo.png": "/react-shop/build/static/media/CompanyNavLogo.60a699702ba48e699c39.png",
+    "static/media/smCompanyNavLogo.png": "/react-shop/build/static/media/smCompanyNavLogo.9423d75f9432541c5338.png",
+    "index.html": "/react-shop/build/index.html",
+    "main.9138c4aa.css.map": "/react-shop/build/static/css/main.9138c4aa.css.map",
+    "main.4138daad.js.map": "/react-shop/build/static/js/main.4138daad.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d5395bf.css",
-    "static/js/main.59e9c002.js"
+    "static/css/main.9138c4aa.css",
+    "static/js/main.4138daad.js"
   ]
 }
