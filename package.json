@@ -44,7 +44,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
-  "homepage": "https://yunsoShin.github.io/react-shop",
+  "homepage": "https://cbbearing.co.kr",
   "eslintConfig": {
     "extends": [
       "react-app",

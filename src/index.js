@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, HashRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Home from './pages/Home';
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, path: '/', element: <Home /> },
+      { index: true, path: '/react-shop', element: <Home /> },
       { path: '/questions', element: <NewQuestion /> },
       { path: '/products', element: <AllProducts /> },
       {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} >
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </RouterProvider>
   </React.StrictMode> 
 );
+
