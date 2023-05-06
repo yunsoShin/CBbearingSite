@@ -43,7 +43,6 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
-    
   },
   "homepage": "https://yunsoShin.github.io/react-shop",
   "eslintConfig": {
