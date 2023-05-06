@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link to='/products/new' className='text-2xl'>
             <BsFillPencilFill />
           </Link>
-        )} 
+        )}
         {user && <User user={user} />}
         {!user && <Button text={'Login'} onClick={login} />}
         {user && <Button text={'Logout'} onClick={logout} />}
@@ -29,4 +29,3 @@ export default function Navbar() {
     </header>
   );
 }
-//d
