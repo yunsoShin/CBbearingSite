@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../components/ui/Button';
-import { uploadImage } from '../api/uploader';
-import { addNewProduct } from '../api/firebase';
+import { uploadImage } from '../Api/uploader';
+import { addNewProduct } from '../Api/firebase';
 export default function NewProduct() {
   const [product,setProduct]=useState({});
   const [file,setFile]=useState();
@@ -74,9 +74,9 @@ export default function NewProduct() {
         onChange={handleChange}/>
       <input 
         type="text" 
-        name='country' 
-        value={product.country ?? ''} 
-        placeholder='국가'
+        name='partNumber' 
+        value={product.partNumber ?? ''} 
+        placeholder='품번'
         required 
         onChange={handleChange}/>
         <Button text={isUploading ? '업로드중...':'제품등록하기'}

@@ -24,3 +24,18 @@ code {
 input {
   @apply p-4 outline-none border border-gray-300 my-1;
 }
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-table-wrapper .ant-table-pagination-right {
+  justify-content: normal;
+  justify-content: center;
+}
+
+
+
+
+
+
+:where(.css-dev-only-do-not-override-yp8pcc).ant-btn-primary {
+  /* color: #fff; */
+  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+}

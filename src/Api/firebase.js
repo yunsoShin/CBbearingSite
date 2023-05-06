@@ -32,7 +32,9 @@ export function logout() {
 export function onUserStateChange(callback) {
   onAuthStateChanged(auth, async (user) => {
     const updatedUser = user ? await adminUser(user) : null;
-    callback(updatedUser);
+    callback(updatedUser)
+    console.log(user)
+    ;
   });
 }
 
@@ -54,7 +56,6 @@ export async function addNewProduct(product,image=''){
     ...product,
     id,
     image,
-    option: product.options ? product.options.split(',') : [],
   });
 }
 
