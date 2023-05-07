@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ef55706.css",
-    "main.js": "/static/js/main.dcce1891.js",
-    "static/media/banner.png": "/static/media/banner.e7bd7476edd6b46bbcdb.png",
-    "static/media/CompanyNavLogo.png": "/static/media/CompanyNavLogo.60a699702ba48e699c39.png",
-    "static/media/smCompanyNavLogo.png": "/static/media/smCompanyNavLogo.9423d75f9432541c5338.png",
-    "index.html": "/index.html",
-    "main.4ef55706.css.map": "/static/css/main.4ef55706.css.map",
-    "main.dcce1891.js.map": "/static/js/main.dcce1891.js.map"
+    "main.css": "/cbbearing.co.kr/static/css/main.99d44b74.css",
+    "main.js": "/cbbearing.co.kr/static/js/main.b98ebcaf.js",
+    "static/media/banner.png": "/cbbearing.co.kr/static/media/banner.e7bd7476edd6b46bbcdb.png",
+    "static/media/CompanyNavLogo.png": "/cbbearing.co.kr/static/media/CompanyNavLogo.60a699702ba48e699c39.png",
+    "static/media/smCompanyNavLogo.png": "/cbbearing.co.kr/static/media/smCompanyNavLogo.9423d75f9432541c5338.png",
+    "index.html": "/cbbearing.co.kr/index.html",
+    "main.99d44b74.css.map": "/cbbearing.co.kr/static/css/main.99d44b74.css.map",
+    "main.b98ebcaf.js.map": "/cbbearing.co.kr/static/js/main.b98ebcaf.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ef55706.css",
-    "static/js/main.dcce1891.js"
+    "static/css/main.99d44b74.css",
+    "static/js/main.b98ebcaf.js"
   ]
 }
