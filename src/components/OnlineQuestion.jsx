@@ -6,13 +6,13 @@ function OnlineQuestion() {
   return (
     <div className="w-full m-auto" id="online_question">
       <p className="index_title flex justify-center my-5 sm:my-11 text-xl sm:text-3xl">온라인문의</p>
-      <div className="md:flex md:justify-center">
+      <div className="md:flex md:justify-center ">
         <div className="sm:mx-10">
           <iframe
             title="온라인문의 지도"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3084013027596!2d126.87608934029521!3d37.50064376514793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9e0d48acba47%3A0x17a5f69a2a89d439!2z7ISc7Jq47Yq567OE7IucIOq1rOuhnOq1rCDqtazroZzrj5kg6rK97J2466GcNTTquLggNA!5e0!3m2!1sko!2skr!4v1585199542802!5m2!1sko!2skr"
             height="280"
-            className=" w-full md:w-96 md:scale-110"
+            className=" w-full md:w-96 h-full md:scale-x-110"
             style={{ border: 0 }}
             allowFullScreen=""
             aria-hidden="false"

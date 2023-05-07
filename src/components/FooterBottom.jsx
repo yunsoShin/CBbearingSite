@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function FooterBottom(props) {
   return (
     <div className="bg-gray-800 text-white py-5">
@@ -30,6 +30,16 @@ function FooterBottom(props) {
         <p className="text-center mt-5 text-xs md:text-sm">
           Copyright © 청북베어링상사 All Rights Reserved.
         </p>
+        <div className='flex gap-3'>
+          <Link to="https://blog.naver.com/shinjjang4895" target="_blank">
+            <img className=' h-7 md:h-9' 
+            src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMQGfU%2FbtrfiFgwIMd%2FO2PJqRb7LsXgxEhzQPKCEK%2Fimg.png" 
+            alt="NaverIMG" />
+          </Link>
+          <Link to="https://github.com/yunsoShin">
+            <img className='h-7 md:h-9' src="https://upload.wikimedia.org/wikipedia/commons/9/95/Font_Awesome_5_brands_github.svg" alt="GithubIMG" />
+          </Link>
+        </div>
       </div>
     </div>
   );
