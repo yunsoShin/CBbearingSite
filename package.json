@@ -44,7 +44,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
-  "homepage": "cbbearing.co.kr",
+  "homepage": "https://cbbearing.co.kr",
   "eslintConfig": {
     "extends": [
       "react-app",
