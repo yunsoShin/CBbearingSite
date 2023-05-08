@@ -8,6 +8,8 @@ export default function Banner() {
         <h2 className='lg:text-4xl text-xl'>청북 베어링 상사</h2>
         <p className='text-xl'>Best Products, High Quality</p>
       </div>
+      
     </section>
+    
   );
 }
