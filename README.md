@@ -8,11 +8,11 @@ libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,ya
 
 # cbbearing.co.kr
 
-[1]: https://cbbearing.co.kr
-
 ## 청북베어링상사 웹홈페이지
 
 <img width="1919" alt="메인페이지" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/39d09082-0131-4b23-99d3-4d3c2ea2c0f2">
+
+[1]: https://cbbearing.co.kr
 
 아버지를 위해 기본적인 웹 홈페이지를 구축하고싶었습니다.
 상품목록을 불러와 해당하는 품번,제목,브랜드를 검색할수있는 기능과,
@@ -21,7 +21,11 @@ libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,ya
 상품목록의 탐색,불러오기 기능은 firebase의 get data와 antd 를 활용해 구현하였고
 
 추가적으로 로그인한 계정이 admin인 uid라면 상품목록의 update기능도 구현했으며 이미지와 같이 업데이트할 수 있도록 구현했고,
-사용자가 의도되지않은 url로 방문시 notfound페이지로 돌아가게끔 ProtectedRoute 컴포넌트로 구현하였습니다.
+사용자가 의도되지않은 url로 방문시 notfound페이지로 돌아가게끔
+ProtectedRoute 컴포넌트로 구현하였습니다.
+
+ISR 적으로 렌더링되도록 업데이트시 시간을 가지고
+fetch하는 기능도 hooks로 리팩토링하였습니다
 
 ---
 
