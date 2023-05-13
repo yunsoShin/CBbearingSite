@@ -6,7 +6,7 @@ CSS - tailwind
 
 libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,yarn
 
-# cbbearin.co.kr
+# cbbearing.co.kr
 
 ## 청북베어링상사 웹홈페이지
 
