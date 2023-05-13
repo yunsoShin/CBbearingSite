@@ -8,6 +8,8 @@ libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,ya
 
 # cbbearing.co.kr
 
+[1]: cbbearing.co.kr
+
 ## 청북베어링상사 웹홈페이지
 
 <img width="1919" alt="메인페이지" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/39d09082-0131-4b23-99d3-4d3c2ea2c0f2">
