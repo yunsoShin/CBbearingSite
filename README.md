@@ -12,7 +12,11 @@ libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,ya
 
 <img width="1919" alt="메인페이지" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/39d09082-0131-4b23-99d3-4d3c2ea2c0f2">
 
-[1]: https://cbbearing.co.kr
+[구글][1]은 참조 링크를 사용합니다.
+[네이버][2]도 동일한 방식으로 사용됩니다.
+
+[1]: https://www.google.com
+[2]: https://www.naver.com
 
 아버지를 위해 기본적인 웹 홈페이지를 구축하고싶었습니다.
 상품목록을 불러와 해당하는 품번,제목,브랜드를 검색할수있는 기능과,
