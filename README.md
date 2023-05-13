@@ -26,8 +26,7 @@ libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,ya
 사용자가 의도되지않은 url로 방문시 notfound페이지로 돌아가게끔
 ProtectedRoute 컴포넌트로 구현하였습니다.
 
-ISR 적으로 렌더링되도록 업데이트시 시간을 가지고
-fetch하는 기능도 hooks로 리팩토링하였습니다
+ISR와 비슷하게 데이터캐싱을 최적화하여 1분동안 데이터 만료가 되지않도록 설정하고 이로인해 요청을 줄이고 최신데이터를 유지하도록 hook을 구현하였습니다
 
 ---
 
