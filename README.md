@@ -8,7 +8,7 @@ libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,ya
 
 # cbbearing.co.kr
 
-[1]: cbbearing.co.kr
+[1]: https://cbbearing.co.kr
 
 ## 청북베어링상사 웹홈페이지
 
