@@ -23,7 +23,7 @@ https://github.com/yunsoShin/CBbearingSite/assets/91814941/fea03f02-b26d-4191-a2
 
 ## 1.로그인인증 Rest API
 
-https://github.com/yunsoShin/CBbearingSite/assets/91814941/6a43cddc-c85f-46da-b9d4-23e5bafa91ac
+<img width="747" alt="로그인인증" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/6a43cddc-c85f-46da-b9d4-23e5bafa91ac">
 
 firebase를 통해 구현한 구글로그인 인증로직
 src/api/firebase.js
