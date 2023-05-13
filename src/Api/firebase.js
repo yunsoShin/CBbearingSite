@@ -68,7 +68,8 @@ export async function getProducts() {
   });
 }
 export async function handleDelete(id) {
-  return remove(ref(database, `products/${id}`));
+  return remove(ref(database, `products/${id}`))
+  .then(console.log("성공하였습니다"));
 }
 
 

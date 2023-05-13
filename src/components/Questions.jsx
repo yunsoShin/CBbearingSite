@@ -7,7 +7,7 @@ import QuestionList from './QuestionList';
 function Questions() 
   {
     const { isLoading, error, data:questions } = useQuery(['questions'],getQuestion);
-    console.log(questions);
+    
   return (
     <>
       {isLoading && <h1>Loading...</h1>}

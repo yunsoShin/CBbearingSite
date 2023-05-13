@@ -4,10 +4,12 @@ import { SearchOutlined } from '@ant-design/icons';
 import { Button, Input, Space, Table } from 'antd';
 import Highlighter from 'react-highlight-words';
 import useProducts from '../hooks/useProducts';
-
-
+import { handleDelete } from '../Api/firebase';
+import { useAuthContext } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 export default function ProductList(){
+  const { user } = useAuthContext();
   const [searchText, setSearchText] = useState('');
   const [searchedColumn, setSearchedColumn] = useState('');
   const searchInput = useRef(null);
@@ -26,7 +28,7 @@ export default function ProductList(){
     clearFilters();
     setSearchText('');
   };
-
+  
   const getColumnSearchProps = (dataIndex) => ({
     filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters, close }) => (
       <div style={{ padding: 8 }} onKeyDown={(e) => e.stopPropagation()}>
@@ -127,8 +129,21 @@ export default function ProductList(){
         
         
       },
+      {
+        title: 'Actions',
+        key: 'actions',
+        width: '10%',
+        render: (text, record) => {
+          return user&&user.isAdmin ? (
+            <Button type="primary" danger onClick={()=>handleDelete(record.id)}>
+              Delete
+            </Button>
+          ) : <div className=' bg-slate-800  rounded-md text-center w-24'><Link className='text-white  text-xl' to='/questions'>Contact</Link> </div>;
+        }
+      }
     ];
+
   
-    return <Table  className='' columns={columns} dataSource={data}  />;
+    return <Table  className='' columns={columns} dataSource={data} rowKey="id"  />;
   };
   
