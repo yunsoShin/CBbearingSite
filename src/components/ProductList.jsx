@@ -132,13 +132,13 @@ export default function ProductList(){
       {
         title: 'Actions',
         key: 'actions',
-        width: '10%',
+        width: '8%',
         render: (text, record) => {
           return user&&user.isAdmin ? (
             <Button type="primary" danger onClick={()=>handleDelete(record.id)}>
               Delete
             </Button>
-          ) : <div className=' bg-slate-800  rounded-md text-center w-24'><Link className='text-white  text-xl' to='/questions'>Contact</Link> </div>;
+          ) : <div className=' bg-slate-800   rounded-md text-center '><Link className='text-white' to='/questions'>Contact</Link> </div>;
         }
       }
     ];
