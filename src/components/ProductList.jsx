@@ -111,8 +111,9 @@ export default function ProductList(){
         title: 'Title',
         dataIndex: 'title',
         key: 'title',
-        width: '30%',
+        width: '20%',
         ...getColumnSearchProps('title'),
+        render: (text) => <div className="md:w-24  sm:w-14 overflow-hidden overflow-ellipsis whitespace-nowrap">{text}</div>,
       },
       {
         title: 'Brand',
@@ -120,12 +121,14 @@ export default function ProductList(){
         key: 'brand',
         width: '20%',
         ...getColumnSearchProps('brand'),
+        
       },
       {
         title: 'partNumber',
         dataIndex: 'partNumber',
         key: 'partNumber',
         ...getColumnSearchProps('partNumber'),
+        render: (text) => <div className="w-24 overflow-hidden overflow-ellipsis whitespace-nowrap">{text}</div>,
         
         
       },
@@ -138,12 +141,12 @@ export default function ProductList(){
             <Button type="primary" danger onClick={()=>handleDelete(record.id)}>
               Delete
             </Button>
-          ) : <div className=' bg-slate-800   rounded-md text-center '><Link className='text-white' to='/questions'>Contact</Link> </div>;
+          ) : <div className=' bg-slate-800  rounded-md text-center  md:w-20'><Link className='text-white text-xs md:text-xl' to='/questions'>Contact</Link> </div>;
         }
       }
     ];
 
   
-    return <Table  className='' columns={columns} dataSource={data} rowKey="id"  />;
+    return <div className=' overflow-auto'><Table  className='min-w-fit' columns={columns} dataSource={data} rowKey="id"  /></div>;
   };
   

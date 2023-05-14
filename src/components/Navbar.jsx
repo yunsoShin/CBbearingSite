@@ -18,7 +18,7 @@ export default function Navbar() {
         <Link to='/products'>Products</Link>
         <Link to='/questions'>Q&A</Link>
         {user && user.isAdmin && (
-          <Link to='/products/new' className='text-2xl'>
+          <Link to='/products/new' className='text-2xl '>
             <BsFillPencilFill />
           </Link>
         )}
