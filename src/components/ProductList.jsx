@@ -46,7 +46,8 @@ export default function ProductList(){
             onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
             icon={<SearchOutlined />}
             size="small"
-            style={{ width: 90 }}
+            style={{ width: 90 , color:'black'}}
+            
           >
             Search
           </Button>
@@ -81,7 +82,7 @@ export default function ProductList(){
       </div>
     ),
     filterIcon: (filtered) => (
-      <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />
+      <SearchOutlined style={{ color: filtered ? '#1890ff' : '#1890ff'}} />
     ),
     onFilter: (value, record) =>
       record[dataIndex] &&

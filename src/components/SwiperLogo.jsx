@@ -35,49 +35,49 @@ function SwiperLogo(props) {
         <img src={ft_rolling_logo1} alt="Swiper-Logo"className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo2} alt="Logo 2" className="flex h-24" />
+        <img src={ft_rolling_logo2} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo3} alt="Logo 3" className="flex h-24" />
+        <img src={ft_rolling_logo3} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo4} alt="Logo 4" className="flex h-24" />
+        <img src={ft_rolling_logo4} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo5} alt="Logo 5" className="flex h-24" />
+        <img src={ft_rolling_logo5} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo6} alt="Logo 6" className="flex h-24" />
+        <img src={ft_rolling_logo6} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo7} alt="Logo 7" className="flex h-24" />
+        <img src={ft_rolling_logo7} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo8} alt="Logo 8" className="flex h-24" />
+        <img src={ft_rolling_logo8} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo1} alt="Logo 1" className="flex h-24" />
+        <img src={ft_rolling_logo1} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo2} alt="Logo 2" className="flex h-24" />
+        <img src={ft_rolling_logo2} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo3} alt="Logo 3" className="flex h-24" />
+        <img src={ft_rolling_logo3} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo4} alt="Logo 4" className="flex h-24" />
+        <img src={ft_rolling_logo4} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo5} alt="Logo 5" className="flex h-24" />
+        <img src={ft_rolling_logo5} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo6} alt="Logo 6" className="flex h-24" />
+        <img src={ft_rolling_logo6} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo7} alt="Logo 7" className="flex h-24" />
+        <img src={ft_rolling_logo7} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
       <SwiperSlide className="h-full flex">
-        <img src={ft_rolling_logo8} alt="Logo 8" className="flex h-24" />
+        <img src={ft_rolling_logo8} alt="Swiper-Logo" className="flex h-24" />
       </SwiperSlide>
 
 
