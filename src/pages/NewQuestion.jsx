@@ -35,7 +35,7 @@ const handlePasswordChange = (e) => {
       <section className='w-full text-center mt-5'>
           <h1 className='text-2xl font-bold'>Q&A</h1>
           {sucess&&<p className='my-2'>{sucess}</p>}
-          <form className='flex flex-col px-12 m-5' onSubmit={handleSubmit}>
+          <form className='flex flex-col px-12 m-5  justify-center ' onSubmit={handleSubmit}>
           <input 
               type="text" 
               name='title' 
@@ -43,16 +43,18 @@ const handlePasswordChange = (e) => {
               placeholder='제목'
               maxLength='20'
               required 
-              onChange={handleChange}/>
+              onChange={handleChange}
+              className='rounded-md  bg-gray-50'
+              />
           <textarea
               type="text" 
               name='details' 
               value={question.details ?? ''} 
-              placeholder='문의내용'
+              placeholder=' 문의내용'
               maxlength='500'
               required 
               onChange={handleChange}
-              className=' relative  h-80 border border-gray-300 my-1'/>
+              className=' relative  h-80 border border-gray-300 my-4 rounded-md  bg-gray-50'/>
           <input 
               type="text" 
               name='phonenumber' 
@@ -60,7 +62,9 @@ const handlePasswordChange = (e) => {
               placeholder='연락처'
               required 
               maxlength='20'
-              onChange={handleChange}/>    
+              onChange={handleChange}
+              className='my-2 rounded-md  bg-gray-50'
+              />    
           <input 
               type="text" 
               name='partNumber' 
@@ -68,7 +72,8 @@ const handlePasswordChange = (e) => {
               placeholder='품번'
               required 
               maxlength='50'
-              onChange={handleChange}/>
+              onChange={handleChange}
+              className='rounded-md  bg-gray-50'/>
             <input 
               type="password" 
               name='password' 
@@ -76,7 +81,9 @@ const handlePasswordChange = (e) => {
               placeholder='비밀번호'
               required 
               maxlength='20'
-              onChange={handlePasswordChange}/>
+              onChange={handlePasswordChange}
+              className='rounded-md  bg-gray-50 my-2'
+              />
               <Button text={isUploading ? '로딩중...':'문의하기'}
               disabled={isUploading}></Button>
           </form>
