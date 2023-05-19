@@ -82,7 +82,7 @@ export default function ProductList(){
       </div>
     ),
     filterIcon: (filtered) => (
-      <SearchOutlined style={{ color: filtered ? '#1890ff' : '#1890ff'}} />
+      <SearchOutlined style={{ color: filtered ? '#1890ff' : 'undefined'}} />
     ),
     onFilter: (value, record) =>
       record[dataIndex] &&
@@ -98,7 +98,7 @@ export default function ProductList(){
     render: (text) =>
       searchedColumn === dataIndex ? (
         <Highlighter
-          highlightStyle={{ backgroundColor: '#ffc069', padding: 10 }}
+          highlightStyle={{ backgroundColor: '', padding: 10 }}
           searchWords={[searchText]}
           autoEscape
           textToHighlight={text ? text.toString() : ''}
@@ -139,10 +139,10 @@ export default function ProductList(){
         width: '8%',
         render: (text, record) => {
           return user&&user.isAdmin ? (
-            <Button type="primary" danger onClick={()=>handleDelete(record.id)}>
+            <Button className='' type="" danger onClick={()=>handleDelete(record.id)}>
               Delete
             </Button>
-          ) : <div className=' bg-slate-800  rounded-md text-center  md:w-20'><Link className='text-white text-xs md:text-xl' to='/questions'>Contact</Link> </div>;
+          ) : <div className=' hover:brightness-150 hover:text-white bg-slate-800  rounded-md text-center  md:w-20'><Link className='text-white text-xs md:text-lg hover:text-white' to='/questions'>Contact</Link> </div>;
         }
       }
     ];
