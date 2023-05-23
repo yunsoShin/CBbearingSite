@@ -1,11 +1,13 @@
 import React from "react";
-import Button from './ui/Button';
+import Button from "./ui/Button";
 import { Link } from "react-router-dom";
 
 function OnlineQuestion() {
   return (
     <div className="w-full m-auto" id="online_question">
-      <p className="index_title flex justify-center my-5 sm:my-11 text-xl sm:text-3xl">온라인문의</p>
+      <p className="index_title flex justify-center my-5 sm:my-11 text-xl sm:text-3xl">
+        온라인문의
+      </p>
       <div className="md:flex md:justify-center ">
         <div className="sm:mx-10">
           <iframe
@@ -19,7 +21,7 @@ function OnlineQuestion() {
             tabIndex="0"
           ></iframe>
         </div>
-        <div className="mb-10 text-lg"> 
+        <div className="mb-10 text-lg">
           <ul className="mb-3 flex items-center flex-col mt-3">
             <li className="mb-5">업무시간 : 09 : 00 - 18 : 00</li>
             <li className="oq_info oq_email mb-5">
@@ -28,11 +30,18 @@ function OnlineQuestion() {
             <li className="oq_info oq_address mb-5">
               주소 : 서울시 구로구 경인로 54길 4 일번지공구상가 J동105호
             </li>
-            <li className="oq_info_half oq_tel mb-5">전화번호 : 02-2637-3437</li>
-            <li className="oq_info_half oq_fax mb-5">팩스번호 : 02-2637-3439</li>
+            <li className="oq_info_half oq_tel mb-5">
+              전화번호 : 02-2637-3437
+            </li>
+            <li className="oq_info_half oq_fax mb-5">
+              팩스번호 : 02-2637-3439
+            </li>
           </ul>
           <div className="flex justify-center">
-            <Link to='/questions'> <Button text={'문의하러가기'}></Button></Link>
+            <Link to="/questions">
+              {" "}
+              <Button text={"문의하러가기"}></Button>
+            </Link>
           </div>
         </div>
       </div>
