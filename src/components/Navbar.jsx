@@ -8,6 +8,7 @@ import CompanyLogo from "../img/CompanyNavLogo.png";
 import smCompanyNavLogo from "../img/smCompanyNavLogo.png";
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
+
   return (
     <header className="flex justify-between border-b border-gray-300 p-2">
       <Link to="/">
