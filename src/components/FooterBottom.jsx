@@ -38,13 +38,6 @@ function FooterBottom(props) {
               alt="NaverIMG"
             />
           </Link>
-          <Link to="https://github.com/yunsoShin">
-            <img
-              className="h-7 md:h-9"
-              src="https://upload.wikimedia.org/wikipedia/commons/9/95/Font_Awesome_5_brands_github.svg"
-              alt="GithubIMG"
-            />
-          </Link>
         </div>
       </div>
     </div>
