@@ -1,4 +1,4 @@
-back-end - firebase
+ back-end - firebase
 .
 front-end - react
 
