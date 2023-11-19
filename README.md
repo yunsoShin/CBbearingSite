@@ -1,5 +1,5 @@
  back-end - firebase
-.
+.  리메이크 필요
 front-end - react
 
 CSS - tailwind
