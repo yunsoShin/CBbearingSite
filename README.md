@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+ back-end - firebase
+.  리메이크 필요
+front-end - react
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CSS - tailwind
 
-## Available Scripts
+libraries and pakage - tailwind,antd,context,react-router-dom,gh-pages,swiper,yarn
 
-In the project directory, you can run:
+# cbbearing.co.kr
 
-### `yarn start`
+[홈페이지 바로가기][1]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 청북베어링상사 웹홈페이지
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="1919" alt="메인페이지" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/39d09082-0131-4b23-99d3-4d3c2ea2c0f2">
 
-### `yarn test`
+[1]: https://cbbearing.co.kr
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+아버지를 위해 기본적인 웹 홈페이지를 구축하고싶었습니다.<br/>  
+상품목록을 불러와 해당하는 품번,제목,브랜드를 검색할수있는 기능과<br/>
 
-### `yarn build`
+게시판형식이거나 문의를 할 수 있는 기능을 구현하면 좋겠다는 생각을 하였습니다<br/>
+상품목록의 탐색,불러오기 기능은 firebase의 get data와 antd 를 활용해 구현하였습니다<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+추가적으로 로그인한 계정이 admin인 uid라면 상품목록의 update기능도 구현했으며 <br/>
+이미지와 같이 업데이트할 수 있도록 구현했고,<br/>
+사용자가 의도되지않은 url로 방문시 notfound페이지로 돌아가게끔<br/>
+ProtectedRoute 컴포넌트로 구현하였습니다.<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+리액트쿼리의 stale설정을 뮤테이션으로 1분동안 데이터 만료가 되지않도록 설정하고<br/>
+최신데이터를 유지하도록 hook을 구현하였습니다
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## 1.로그인인증 Rest API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="747" alt="로그인인증" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/6a43cddc-c85f-46da-b9d4-23e5bafa91ac">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+firebase를 통해 구현한 구글로그인 인증로직<br/>
+src/api/firebase.js<br/><br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.login<br/>
+2.logout<br/>
+3.onUserStateChange<br/>
+4.adminUser 기능 구현<br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 2.Q&A
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="1897" alt="문의하기 페이지" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/c1548a00-7888-45c3-bc21-bb86435505aa"><br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.addNewQuestion<br/>
+2.getQuestion / 게시판형식의 목록화된 페이지를 업데이트할 예정입니다<br/>
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 3.제품등록 cloudinary + firebase API
 
-### Analyzing the Bundle Size
+<img width="1510" alt="제품등록" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/e0568616-c186-45de-9206-bbe04b5a895f">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="626" alt="cloudinary연동" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/023f7ec7-7a2b-4e13-9e5d-566001bd9487">
 
-### Making a Progressive Web App
+1. getProducts<br/>
+2. addNewProduct<br/>
+3. useProducts / hook<br/>
+   - ProductsQuery<br/>
+   - addProduct<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+더 손쉽고 강력한 RESTful API를 사용하는 클라우드 기반 이미지 및 비디오 관리 서비스를 적용하였습니다<br/>
+이미지 관리가 손쉬워졌습니다<br/>
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 4.상품목록게시판 antd
 
-### Deployment
+<img width="1357" alt="어드민 삭제기능" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/efc06c6e-0f48-4cc4-8c34-e6f9b624fe60">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+로그인한 유저가 있고, 그 유저가 어드민권한을가진 UID라면 delete버튼을 표시하고<br/>
+삭제 기능을 구현함 firebase의 접속없이 웹에서 삭제기능을 수행할 수 있습니다
 
-### `yarn build` fails to minify
+<img width="1356" alt="방문자 문의하기버튼" src="https://github.com/yunsoShin/CBbearingSite/assets/91814941/c52197bb-6fc7-4866-b255-3ceb6c2d8dd1">
+반대로 접속유저가 어드민이 아닐때는 문의하기 버튼으로 이동시켜주었습니다<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ProductList.jsx에 기능이 구현되어있습니다<br/>
+
+---

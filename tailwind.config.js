@@ -1,16 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: ['./src/**/*.{js,jsx}'],
   theme: {
     extend: {
-      backgroundImage:{
-        banner: `url('/Users/sin-yunsu/react-shop/public/images/banner.png')`,
+      backgroundImage: {
+        banner: `url('../public/images/banner.png')`,
+        content:`url('../public/images/main_img_cover.png')`,
       },
-      
     },
-    
   },
-  
   plugins: [],
   
-}
+};
