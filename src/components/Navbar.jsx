@@ -26,11 +26,11 @@ export default function Navbar() {
       <nav className="flex items-center gap-4 font-semibold">
 
         <Link to="/questions">Q&A</Link>
-        {user && user.isAdmin && (
+        {/* {user && user.isAdmin && (
           <Link to="/products/new" className="text-2xl ">
             <BsFillPencilFill />
           </Link>
-        )}
+        )} */}
         {user && <User user={user} />}
         {!user && <Button text={"Login"} onClick={login} />}
         {user && <Button text={"Logout"} onClick={logout} />}
